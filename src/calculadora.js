@@ -6,8 +6,8 @@ function calculadora(cadena) {
   else
   {
     if(cadena.length > 1){
-      let cadenaNumeros = cadena.split(",");
-      return parseInt(cadenaNumeros[0]) + parseInt(cadenaNumeros[1]);
+      let cadenaNumeros = conversion(cadena.split(","));
+      return sumar(cadenaNumeros);
     }
     else
     {
@@ -15,5 +15,19 @@ function calculadora(cadena) {
     }
   }
   
+}
+function sumar(numeros){
+  let suma = 0;
+  for (let i = 0 ; i < numeros.length; i++){
+    suma = suma + numeros[i];
+  } 
+  return suma;
+}
+function conversion(cadena){
+  let nuevaCadena = [];
+  for (let i = 0 ; i < cadena.length; i++){
+    nuevaCadena[i] = parseInt(cadena[i]);
+  } 
+  return nuevaCadena;
 }
 export default calculadora;

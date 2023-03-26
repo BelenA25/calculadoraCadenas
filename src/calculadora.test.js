@@ -10,4 +10,7 @@ describe("Calcular suma", () => {
   it("deberia retornar 3", () => {
     expect(calculadora("1,2")).toEqual(3);
   });
+  it("deberia sumar 3 numeros", () => {
+    expect(calculadora("6,2,1")).toEqual(9);
+  });
 });
