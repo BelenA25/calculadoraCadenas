@@ -6,7 +6,7 @@ function calculadora(cadena) {
   else
   {
     if(cadena.length > 1){
-      let cadenaNumeros = conversion(cadena.split(","));
+      let cadenaNumeros = conversion(cadena.split(/[,-]+/));
       return sumar(cadenaNumeros);
     }
     else
