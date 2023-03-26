@@ -5,9 +5,15 @@ function calculadora(cadena) {
   }
   else
   {
-    return parseInt(cadena);
+    if(cadena.length > 1){
+      let cadenaNumeros = cadena.split(",");
+      return parseInt(cadenaNumeros[0]) + parseInt(cadenaNumeros[1]);
+    }
+    else
+    {
+      return parseInt(cadena);
+    }
   }
   
 }
-
 export default calculadora;
