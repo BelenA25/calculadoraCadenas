@@ -6,8 +6,18 @@ function calculadora(cadena) {
   else
   {
     if(cadena.length > 1){
-      let cadenaNumeros = conversion(cadena.split(/[,-]+/));
-      return sumar(cadenaNumeros);
+      if(cadena[0]=="/")
+      {
+        let cadenas = cadena.split(" ");
+        let cadenaNumeros = conversion(cadenas[1].split(cadenas[0][3]));
+        return sumar(cadenaNumeros);
+      }
+      else
+      {
+        let cadenaNumeros = conversion(cadena.split(/[,-]+/));
+        return sumar(cadenaNumeros);
+      }
+      
     }
     else
     {

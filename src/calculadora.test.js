@@ -16,4 +16,10 @@ describe("Calcular suma", () => {
   it("deberia sumar 3 numeros, con el guion como separador", () => {
     expect(calculadora("6,2-4")).toEqual(12);
   });
+  it("deberia sumar 3 numeros, con el guion como separador", () => {
+    expect(calculadora("6,2-4")).toEqual(12);
+  });
+  it("deberia especificar el separador", () => {
+    expect(calculadora("//[;] 6;7;4")).toEqual(17);
+  });
 });
