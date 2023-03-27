@@ -4,21 +4,38 @@ function calculadora(cadena) {
   }
   else {
     if (tamanoCadena(cadena) > 1) {
-      if (cadena[0] == "/") {
-        let cadenas = cadena.split(" ");
-        let delimitador = cadenas[0][3];
-        let delimitadores = "/,|-|;/";
-        let cadenaNumeros = conversion(splitMulti(cadenas[1], [',', '-', delimitador]));
-        return sumar(cadenaNumeros);
+      if (delimitadorEspecificado(cadena)) {
+        return sumaDeCadenaConDelimitador(cadena);
       }
       else {
-        let cadenaNumeros = conversion(cadena.split(/,|-/));
-        return sumar(cadenaNumeros);
+        return sumaDeCadena(cadena);
       }
     }
     else {
       return parseInt(cadena);
     }
+  }
+}
+
+function sumaDeCadena(cadena){
+  let cadenaNumeros = conversion(cadena.split(/,|-/));
+  return sumar(cadenaNumeros);
+}
+
+function sumaDeCadenaConDelimitador(cadena){
+  let cadenas = cadena.split(" ");
+  let delimitador = cadenas[0][3];
+  let cadenaNumeros = conversion(splitMulti(cadenas[1], [',', '-', delimitador]));
+  return sumar(cadenaNumeros);
+}
+
+function delimitadorEspecificado(cadena){
+  if (cadena[0] == "/"){
+    return true;
+  }
+  else
+  {
+    return false;
   }
 }
 
