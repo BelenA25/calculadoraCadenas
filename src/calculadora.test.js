@@ -22,4 +22,7 @@ describe("Calcular suma", () => {
   it("deberia especificar el separador", () => {
     expect(calculadora("//[;] 6;7;4")).toEqual(17);
   });
+  it("deberia sumar con los separadores comunes", () => {
+    expect(calculadora("//[;] 6,3-2;1")).toEqual(12);
+  });
 });
