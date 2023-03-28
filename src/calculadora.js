@@ -18,14 +18,14 @@ function calculadora(cadena) {
 }
 
 function sumaDeCadena(cadena){
-  let cadenaNumeros = conversion(cadena.split(/,|-/));
+  var cadenaNumeros = conversion(cadena.split(/,|-/));
   return sumar(cadenaNumeros);
 }
 
 function sumaDeCadenaConDelimitador(cadena){
-  let cadenas = cadena.split(" ");
-  let delimitador = cadenas[0][3];
-  let cadenaNumeros = conversion(splitMulti(cadenas[1], [',', '-', delimitador]));
+  var cadenas = cadena.split(" ");
+  var delimitador = cadenas[0][3];
+  var cadenaNumeros = conversion(splitMulti(cadenas[1], [',', '-', delimitador]));
   return sumar(cadenaNumeros);
 }
 
@@ -44,16 +44,16 @@ function tamanoCadena(cadena){
 }
 
 function sumar(numeros) {
-  let suma = 0;
-  for (let i = 0; i < numeros.length; i++) {
+  var suma = 0;
+  for (var i = 0; i < numeros.length; i++) {
     suma = suma + numeros[i];
   }
   return suma;
 }
 
 function conversion(cadena) {
-  let nuevaCadena = [];
-  for (let i = 0; i < cadena.length; i++) {
+  var nuevaCadena = [];
+  for (var i = 0; i < cadena.length; i++) {
     nuevaCadena[i] = parseInt(cadena[i]);
   }
   return nuevaCadena;

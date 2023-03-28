@@ -1,11 +1,14 @@
 <html>
   <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
+    <h1>Calculadora</h1>
+    <form id="calculadora-form">
+      <p for="numero">Ingrese la cadena de numeros, separado por ",","-", o un delimitador especifico:</p>
+      <p>Ejemplos:</p>
+      <p>“1,2,4,8”</p>
+      <p>“1-2,3”</p>
+      <p>Delimitador especificado: “//[;] 6;7;4”</p>
+      <p>Otro ejemplo: “//[;] 6,3-2;1”</p>
+      <input type="text" id="cadena" />
       <input type="submit" value="Sumar" id="sumar-button" />
     </form>
     <div id="resultado-div"></div>
