@@ -1,19 +1,16 @@
 function calculadora(cadena) {
-  if (tamanoCadena(cadena)==0) {
-    return 0;
+  if (tamanoCadena(cadena) == 0) return 0;
+  if (tamanoCadena(cadena) >= 1) return trabajarConDelimitador(cadena);
+} 
+
+function trabajarConDelimitador(cadena){
+  if (delimitadorEspecificado(cadena)) 
+  {
+    return sumaDeCadenaConDelimitador(cadena);
   }
-  else {
-    if (tamanoCadena(cadena) > 1) {
-      if (delimitadorEspecificado(cadena)) {
-        return sumaDeCadenaConDelimitador(cadena);
-      }
-      else {
-        return sumaDeCadena(cadena);
-      }
-    }
-    else {
-      return parseInt(cadena);
-    }
+  else 
+  {
+    return sumaDeCadena(cadena);
   }
 }
 
