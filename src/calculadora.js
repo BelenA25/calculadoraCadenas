@@ -22,7 +22,7 @@ function sumaDeCadena(cadena){
 function sumaDeCadenaConDelimitador(cadena){
   var cadenas = cadena.split(" ");
   var delimitador = cadenas[0][3];
-  var cadenaNumeros = conversion(splitMulti(cadenas[1], [',', '-', delimitador]));
+  var cadenaNumeros = conversion(splitMultiChar(cadenas[1], [',', '-', delimitador]));
   return sumar(cadenaNumeros);
 }
 
@@ -56,7 +56,7 @@ function conversion(cadena) {
   return nuevaCadena;
 }
 
-function splitMulti(str, tokens) {
+function splitMultiChar(str, tokens) {
   var tempChar = tokens[0];
   for (var i = 1; i < tokens.length; i++) {
     str = str.split(tokens[i]).join(tempChar);
